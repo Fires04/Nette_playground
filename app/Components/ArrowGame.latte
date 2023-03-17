@@ -1,0 +1,20 @@
+{block content}
+<div style="background-color: darkseagreen;">
+<h2>Arrow game</h2>
+<a n:href="move! up">UP</a>
+<a n:href="move! down">DOWN</a>
+<a n:href="move! left">LEFT</a>
+<a n:href="move! right">RIGHT</a>
+
+{dump $position}
+
+<table>
+    <table class="fifteen">
+        <tr n:for="$y = 1; $y <= $heigth ; $y++">
+            <td style="width:50px;height:50px;background-color: burlywood;" n:for="$x=1; $x <= $width; $x++">
+                <h2 n:if="$position[0]==$x && $position[1]==$y">X</h2>
+            </td>
+        </tr>
+</table>
+
+</div>
