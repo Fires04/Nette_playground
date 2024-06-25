@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/nette,composer
-# Edit at https://www.toptal.com/developers/gitignore?templates=nette,composer
+# Created by https://www.toptal.com/developers/gitignore/api/git,composer,nette
+# Edit at https://www.toptal.com/developers/gitignore?templates=git,composer,nette
 
 ### Composer ###
 composer.phar
@@ -9,6 +9,21 @@ composer.phar
 # You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
 # composer.lock
 
+### Git ###
+# Created by git for backups. To disable backups in Git:
+# $ git config --global mergetool.keepBackup false
+*.orig
+
+# Created by git when using merge tools for conflicts
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
+
 ### Nette ###
 # Nette - http://nette.org
 # Ignore /log and /temp directories content but commit .htaccess settings
@@ -17,4 +32,4 @@ composer.phar
 /temp/*
 !/temp/.htaccess
 
-# End of https://www.toptal.com/developers/gitignore/api/nette,composer
+# End of https://www.toptal.com/developers/gitignore/api/git,composer,nette
