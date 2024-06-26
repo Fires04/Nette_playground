@@ -23,6 +23,7 @@ class ModalComponent extends Control
 
     public function handleFetchData($data){
         $this->data = $data;
+        $this->getPresenter()->payload->customData = ["testPayload" => "data-123"];
         $this->redrawControl("modalContent");
     }
 
