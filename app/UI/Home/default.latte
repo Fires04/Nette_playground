@@ -1,11 +1,20 @@
 {block content}
 <div class="col">
 	<a n:href="modalWindow:fetchData! content1" class="ajax"><button type="button" class="btn btn-primary">Test content 1</button></a>
-	<a n:href="modalWindow:fetchData! content2" class="ajax"><button type="button" class="btn btn-success">Test content 2</button></a>
+	<!-- Replace history - the back button do not restore previous state-->
+	<a n:href="modalWindow:fetchData! content2" class="ajax" data-naja-history="replace"><button type="button" class="btn btn-success">Test content 2</button></a>
 	<a n:href="modalWindow:fetchData! content3" class="ajax"><button type="button" class="btn btn-danger">Test content 3</button></a>
 
 <!-- Button trigger modal -->
 
 {control modalWindow}
 
+</div>
+
+{/block}
+
+{block comments}
+<div n:snippet="cart" data-naja-snippet-cache="off">
+    <!-- do not save the snipped state to history, if return back in history it will always load new state -->
+	<!-- To refetch snippets, Naja sends a new GET request to the original URL (or to the URL provided from the server via postGet). Make sure that all the reachable actions and signals are able to respond to AJAX requests with redrawn snippets, otherwise Naja will break. -->
 </div>

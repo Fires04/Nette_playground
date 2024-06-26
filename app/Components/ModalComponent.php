@@ -23,7 +23,16 @@ class ModalComponent extends Control
 
     public function handleFetchData($data){
         $this->data = $data;
+        //ADD custom data to payload
         $this->getPresenter()->payload->customData = ["testPayload" => "data-123"];
+
+        //PRG - schema - allow to bookmark the url (something like nette form onSuccess -> redirect('this'))
+        if($data == "content3"){
+            $this->getPresenter()->payload->postGet = TRUE;
+            $this->getPresenter()->payload->url = $this->link('this');
+        }
+
+
         $this->redrawControl("modalContent");
     }
 

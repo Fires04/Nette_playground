@@ -5,6 +5,6 @@ $(window).on('load', function() {
     naja.addEventListener('complete', (event) => {
         console.log("completed");
         console.log(event);
-        $('#exampleModal').modal('show');
+
     });
 });
